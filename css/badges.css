@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+
+.badge img {
+    position: relative;
+    z-index: 3;
+}
+
+.badge[data-order]:before,
+.badge[data-order]:after {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.badge[data-order]:before {
+    right: -7px;
+    bottom: -7px;
+    z-index: -1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: inherit;
+    content: '';
+
+}
+
+.badge[data-order]:after {
+    right: -3px;
+    bottom: -3px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    content: attr(data-order);
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 36px;
+}
+
+.badge.-blue {
+    border-color: #89b8cf;
+    background-color: #f3f8fa;
+    color: #89b8cf;
+}
+
+.badge.-purple {
+    border-color: #b09eb7;
+    background-color: #f7f5f8;
+    color: #b09eb7;
+}
